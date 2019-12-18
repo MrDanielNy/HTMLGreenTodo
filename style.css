@@ -14,6 +14,21 @@ li {
     list-style: none;
 }
 
+a:link {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: rgb(160, 160, 160);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
 
 #buttons {
     display: flex;
@@ -26,10 +41,13 @@ li {
     transform: translateX(-50%)
 }
 
+button:hover{
+    color: red;
+}
 button {
-    background-color: red;
+    background-color: rgb(0, 0, 0);
     border: none;
-    color: black;
+    color:  rgb(255, 255, 255);
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -49,14 +67,6 @@ button {
 .todo {
     text-align: center;
     font-size: 30;
-}
-
-.lime {
-    background: lime;
-}
-
-.pink {
-    background: pink;
 }
 
 .news-headline {
@@ -93,7 +103,7 @@ hr {
 
 @media only screen and (min-width: 700px) {
     body {
-        background: rgb(202, 16, 16)
+        background: rgb(3, 77, 6)
     }
     article {
         position: fixed;
