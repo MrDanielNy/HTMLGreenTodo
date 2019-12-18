@@ -10,6 +10,14 @@ var EventHandler = (function(){
                 window.location.reload();
         });
 
+        
+        $("#list-of-todos").on("click", ".delete-button", function () {
+
+            TODOStorage.deleteTodoById(this.dataset.id);
+            window.location.reload();
+            
+    });
+
 
 
     }
@@ -35,9 +43,9 @@ var DocumentHandler = (function() {
         for (var i = 0; i < gottenTodo.length; i++) {
             console.log(gottenTodo[i].activity.activityName);
             if (gottenTodo[i].activity.done) {
-                listOfTodos.innerHTML += "<li> 🔵" + gottenTodo[i].activity.activityName + "<button class='done-button' data-id=" + gottenTodo[i].id + "> Ej klar</button>";
+                listOfTodos.innerHTML += "<li> 🔵" + gottenTodo[i].activity.activityName + "<button class='done-button' data-id=" + gottenTodo[i].id + "> Ej klar</button><button class='delete-button' data-id=" + gottenTodo[i].id + ">Ta bort</button>";
             } else {
-                listOfTodos.innerHTML += "<li> 🔴" + gottenTodo[i].activity.activityName + "<button class='done-button' data-id=" + gottenTodo[i].id + ">Klar</button>";
+                listOfTodos.innerHTML += "<li> 🔴" + gottenTodo[i].activity.activityName + "<button class='done-button' data-id=" + gottenTodo[i].id + ">Klar</button><button class='delete-button' data-id=" + gottenTodo[i].id + ">Ta bort</button>";
             }
 
         }
