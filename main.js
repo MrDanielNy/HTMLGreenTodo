@@ -1,5 +1,28 @@
 var allActivities = []; //The main array that handles objects
 
+var EventHandler = (function(){
+
+    function init(){
+
+        $("#list-of-todos").on("click", ".done-button", function () {
+
+                TODOStorage.updateTodo(this.dataset.id);
+                window.location.reload();
+        });
+
+
+
+    }
+
+  return{
+      init,
+  }
+
+})();
+
+
+
+
 
 var DocumentHandler = (function() {
 
@@ -12,9 +35,9 @@ var DocumentHandler = (function() {
         for (var i = 0; i < gottenTodo.length; i++) {
             console.log(gottenTodo[i].activity.activityName);
             if (gottenTodo[i].activity.done) {
-                listOfTodos.innerHTML += "<li> 🔵" + gottenTodo[i].activity.activityName + "<button data-id=" + i + "> Ej klar</button>";
+                listOfTodos.innerHTML += "<li> 🔵" + gottenTodo[i].activity.activityName + "<button class='done-button' data-id=" + gottenTodo[i].id + "> Ej klar</button>";
             } else {
-                listOfTodos.innerHTML += "<li> 🔴" + gottenTodo[i].activity.activityName + "<button>Klar</button>";
+                listOfTodos.innerHTML += "<li> 🔴" + gottenTodo[i].activity.activityName + "<button class='done-button' data-id=" + gottenTodo[i].id + ">Klar</button>";
             }
 
         }
@@ -40,4 +63,7 @@ var DocumentHandler = (function() {
 
 })()
 
-document.addEventListener("DOMContentLoaded", DocumentHandler.init);
+document.addEventListener("DOMContentLoaded", function() {
+DocumentHandler.init(),
+EventHandler.init()
+});

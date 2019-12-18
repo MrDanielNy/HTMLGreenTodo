@@ -10,6 +10,11 @@ body {
     width: 100%;
 }
 
+li {
+    list-style: none;
+}
+
+
 #buttons {
     display: flex;
     align-items: center;

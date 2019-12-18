@@ -73,9 +73,19 @@ var TODOStorage = (function() {
     }
 
     function updateTodo(newId) {
+
+        console.log(newId);
+        
         for (let i = 0; i < todosList.length; i++) {
             if (todosList[i].id == newId) {
-                todosList[i].done = true;
+                
+                if(todosList[i].activity.done === false){
+                    todosList[i].activity.done = true;
+                }
+                else {
+                    todosList[i].activity.done = false;
+                }
+
             }
         }
         saveChanges();
