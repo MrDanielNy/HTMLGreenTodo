@@ -6,7 +6,6 @@ var DocumentHandler = (function() {
     function init() {
         TODOStorage.init();
 
-        //var gottenTodo = TODOStorage.getTodoById(0);
         var gottenTodo = TODOStorage.listTodos();
         var listOfTodos = document.getElementById("list-of-todos");
 
@@ -37,7 +36,7 @@ var DocumentHandler = (function() {
 
     }
 
-    return { init, addToList }
+    return { init }
 
 })()
 

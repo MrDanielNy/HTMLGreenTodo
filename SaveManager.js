@@ -4,7 +4,6 @@ function ActivityObject(newId, newName, isDone) {
     this.done = isDone;
 }
 
-var debugVar;
 var TODOStorage = (function() {
     var todosList = [];
     /* var userList = []; */
@@ -15,7 +14,7 @@ var TODOStorage = (function() {
         //Get todos
         const lsTodos = localStorage.getItem('QuickTodo');
         todosList = JSON.parse(lsTodos)
-        debugVariable2 = todosList; //DEBUG!!
+
         if (todosList != null) {
             for (let i = 0; i < todosList.length; i++) {
                 todos.push(todosList[i]);
@@ -28,7 +27,6 @@ var TODOStorage = (function() {
         }
 
         //New DN code to add objects to list
-        //console.log("todos is " + todos.length);
         for (let i = 0; i < todos.length; i++) {
 
             var newId = todos[i].id;
@@ -36,7 +34,6 @@ var TODOStorage = (function() {
             var newADone = todos[i].done;
             let listObject = new ActivityObject(newId, newAName, newADone);
             allActivities.push(listObject);
-            DocumentHandler.addToList(listObject);
         }
     }
 
@@ -83,17 +80,7 @@ var TODOStorage = (function() {
         }
         saveChanges();
     }
-    //Get user by id
-    /*function getUserById(id) {
-        console.log("Inside getUserById with number " + id);
-        for (let i = 0; i < userList.length; i++) {
-            if (id == userList[i].ID) {
-                console.log("trying to get user " + userList[i].firstName + " with id " + userList[i].ID);
-                return userList[i];
-            }
-        }
-        return null;
-    }*/
+
 
     //Get todo-activity by id
     function getTodoById(id) {
