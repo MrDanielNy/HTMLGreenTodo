@@ -59,6 +59,29 @@ button {
     background: pink;
 }
 
+.news-headline {
+    text-align: center;
+    font-size: 2em;
+}
+
+.news-title {
+    font-size: 1.6em;
+    padding: 2% 2% 0;
+}
+
+.news-text {
+    padding: 0 1%;
+}
+
+.date {
+    color: lightgray;
+    margin: 0 2% 0 0;
+}
+
+hr {
+    margin: 5% 2% 0;
+}
+
 @media only screen and (min-width: 500px) {
     body {
         background: rgb(255, 255, 255);
