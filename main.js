@@ -13,8 +13,9 @@ var EventHandler = (function(){
         
         $("#list-of-todos").on("click", ".delete-button", function () {
 
-            console.log(this.dataset.id);
-            //window.location.reload();
+            TODOStorage.deleteTodoById(this.dataset.id);
+            window.location.reload();
+            
     });
 
 
