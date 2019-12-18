@@ -92,6 +92,21 @@ hr {
     margin: 5% 2% 0;
 }
 
+fieldset{
+    text-align: center;
+    margin-top: 20px;
+    border-style: none;
+    height: 250px;
+}
+#UniBird{
+    width: 400px;
+    height: 200px;
+}
+#about{
+    text-align: center;
+    margin: auto;
+    font-size: larger;
+}
 @media only screen and (min-width: 500px) {
     body {
         background: rgb(255, 255, 255);
