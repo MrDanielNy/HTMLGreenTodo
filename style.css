@@ -54,7 +54,7 @@ button {
 }
 
 .bigbutton {
-    padding: 15px 32px;
+    padding: 14px 28px;
 }
 
 .title {
@@ -70,7 +70,7 @@ button {
     overflow-x: hidden;
     margin: 0 auto;
     margin-top: 4%;
-    font-size: 30;
+    font-size: 5vmin;
 	
 }
 #wrappereven{width:100%;height:40px;background-color: rgb(153, 182, 122);border-radius: 10px;}
@@ -82,8 +82,8 @@ li {
 }
 
 #twobuttons{width:40%;float:left;text-align: right;padding-top: 6px;}
-.done-button{padding-top:5px; padding-bottom:5px; padding-left:8px; padding-right:8px;}
-.delete-button{padding-top:5px; padding-bottom:5px; padding-left:8px; padding-right:8px;}
+.done-button{padding-top:5px; padding-bottom:5px; padding-left:6px; padding-right:6px;}
+.delete-button{padding-top:5px; padding-bottom:5px; padding-left:6px; padding-right:6px;}
 
 .rdot {
     height: 25px;
